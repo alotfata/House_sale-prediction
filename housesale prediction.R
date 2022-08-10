@@ -2,22 +2,18 @@
 
 df<-read.csv("train.csv")
 df1<-read.csv('test.csv')
-str(df1)
-str(df)
 
-lapply(df, )
-
+#drop target variable
 dff<-select(df, -SalePrice )
 alldata<-rbind(dff, df1)
-
 str(alldata)
 
+#explore data EDA
 head(df)
 str(df[1:10])
 library(Amelia)
 missmap(df)
 is.null(df)
-is.null
 missmap(df[1])
 
 colSums(is.na(df))
@@ -27,9 +23,7 @@ missmap(df)
 colSums(is.na(df))
 rowSums(is.na(df))
 #columons have significant number of missing values 
-#alley char >> missing 
-# $ YearRemodAdd:
-# YearRemodAd 
+
 df[!complete.cases(df),]
 
 df$Alley
